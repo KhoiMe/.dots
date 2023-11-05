@@ -117,7 +117,7 @@ bindsym $mod+Shift+9 move container to workspace 9; workspace 9
 bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 
 bindsym $mod+p move workspace to output right
-bindsym $mod+m focus output right
+bindsym $mod+f focus output right
 
 
 ################# menu's in arcolinux
@@ -237,7 +237,7 @@ bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 # Super + F in arcolinux is execute thunar
-bindsym $mod+f fullscreen toggle
+bindsym $mod+m fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 # qwerty/azerty issue for letter z
