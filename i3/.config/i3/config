@@ -357,7 +357,7 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 ################# applications keyboard shortcuts
 
 # not workspace related
-exec --no-startup-id cerebro &
+# exec --no-startup-id cerebro &
 
 # terminal
 bindsym $mod+Return exec --no-startup-id alacritty;focus
