@@ -16,7 +16,7 @@
 )
 
 (defalias
-  num  (layer-toggle numbers) ;; Bind num to a button that switches to a layer
+  alter (layer-toggle alternate)
   kil  C-A-del                ;; Bind kil to a button that Ctrl-Alt-deletes
 )
 
@@ -25,7 +25,7 @@
   tab  q    d    r    w    b    j    f    u    p    ;    [    ]    \
   caps  a    s    h    t    g    y    n    e    o    i    '    ret
   lsft z    x    m    c    v    k    l    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rmet cmp  rctl
+  lctl lmet lalt           spc            ralt  rctl
 )
 
 (deflayer default 
@@ -33,15 +33,15 @@
   tab  q    d    r    w    b    j    f    u    p    ;    [    ]    \
   esc  a    s    h    t    g    y    n    e    o    i    '    ret
   lsft z    x    m    c    v    k    l    ,    .    /    rsft
-  lctl lmet lalt           spc            @num rmet cmp  rctl
+  lctl @alter lalt           spc            ralt  rctl
 )
 
-(deflayer numbers
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    3    _    _    XX   4    _    7    _    _    _    _    _
-  _    1    2    _    _    XX   *    _    _    9    8    _    _
-  _    _    \(   \)   .    XX   5    6    _    _    _    _
-  _    _    _              _              _    _    _    _
+(deflayer alternate 
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  $   \)    }    {    8    4    8  1    bspc    ;   -    ]    \
+  esc  =    \(    0    t    9    \)    7    }    3    2    '    ret
+  lsft z    x    8    c    v    5    6    9    .    /    rsft
+  lctl lmet lalt           spc            ralt  rctl
 )
 
 
