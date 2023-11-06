@@ -233,7 +233,6 @@ default_orientation horizontal
 bindsym $mod+z split h
 
 # split in vertical orientation
-bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 # Super + F in arcolinux is execute thunar
@@ -376,7 +375,7 @@ bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle"
 # https://github.com/acrisci/playerctl/
 bindsym $mod+t exec --no-startup-id playerctl play-pause
 bindsym $mod+n exec --no-startup-id playerctl next
-bindsym $mod+. exec --no-startup-id playerctl previous
+bindsym $mod+v exec --no-startup-id playerctl previous
 bindsym XF86AudioStop exec --no-startup-id playerctl stop
 # bindsym XF86AudioPlay exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 # bindsym XF86AudioNext exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
