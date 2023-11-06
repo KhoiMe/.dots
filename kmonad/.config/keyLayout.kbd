@@ -16,7 +16,8 @@
 )
 
 (defalias
-  alter (layer-toggle alternate)
+  alter (layer-switch alternate)
+  default (layer-switch default)
   kil  C-A-del                ;; Bind kil to a button that Ctrl-Alt-deletes
 )
 
@@ -41,7 +42,7 @@
   tab  $   \)    }    {    8    4    8  1    bspc    ;   -    ]    \
   esc  =    \(    0    t    9    \)    7    }    3    2    '    ret
   lsft z    x    8    c    v    5    6    9    .    /    rsft
-  lctl lmet lalt           spc            ralt  rctl
+  lctl @default lalt           spc            ralt  rctl
 )
 
 
