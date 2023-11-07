@@ -369,9 +369,9 @@ bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
 # xkill
 bindsym --release $mod+Escape exec xkill
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '5%+'"
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '5%-'"
-bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle"
+bindsym $mod+Shift+u  exec --no-startup-id "amixer -D pulse sset Master '5%+'"
+bindsym $mod+Shift+d exec --no-startup-id "amixer -D pulse sset Master '5%-'"
+bindsym $mod+Shift+m exec --no-startup-id "amixer -D pulse set Master toggle"
 # https://github.com/acrisci/playerctl/
 bindsym $mod+t exec --no-startup-id playerctl play-pause
 bindsym $mod+n exec --no-startup-id playerctl next
