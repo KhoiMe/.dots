@@ -40,8 +40,8 @@
 
 (deflayer rows 
   grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
-  tab  q    d    r    w    b    left    f    u    p    ;    [    ]    \
-  esc  a    s    h    t    g    y    n    e    o    up    '    ret
+  tab  q    d    pp   volu    next    left    f    u    p    ;    [    ]    \
+  esc  a    vold    h    t    g    prev    n    e    o    up    '    ret
   lsft z    x    m    c    v    down    right    ,    .    /    rsft
   lctl @default lalt           spc            ralt  @alter 
 )
