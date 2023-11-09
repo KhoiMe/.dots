@@ -18,8 +18,20 @@
 (defalias
   alter (layer-switch alternate)
   row (layer-switch rows)
+  toggleRows (layer-toggle rows)
   default (layer-switch default)
   kil  C-A-del                ;; Bind kil to a button that Ctrl-Alt-deletes
+
+  ;; home row mods
+  home_a (tap-hold-next-release 200 a @toggleRows)
+  home_s (tap-hold-next-release 200 s lctl)
+  home_h (tap-hold-next-release 200 d lsft)
+  home_t (tap-hold-next-release 200 f lalt)
+
+  home_n (tap-hold-next-release 200 j rsft)
+  home_e (tap-hold-next-release 200 k rctl)
+  home_o (tap-hold-next-release 200 l lalt)
+  home_i (tap-hold-next-release 200 ; rmet)
 )
 
 (defsrc
@@ -32,9 +44,9 @@
 
 (deflayer default 
   grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
-  tab  q    d    r    w    b    j    f    u    p    ;    [    ]    \
-  esc  a    s    h    t    g    y    n    e    o    i    '    ret
-  lsft z    x    m    c    v    k    l    ,    .    /    rsft
+  tab  q    @home_h    r    w   b   @home_n    @home_t    u    p    ;    bspc    ]    \
+  esc  @home_a   @home_s    h    t    g    y    n    e    o    i    '    ret
+  lsft z    x    m    c    v   @home_e   @home_o    ,    .    /    rsft
   lctl @alter lalt           spc            ralt @row
 )
 
