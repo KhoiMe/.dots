@@ -19,6 +19,7 @@
   alter (layer-switch alternate)
   row (layer-switch rows)
   toggleRows (layer-toggle rows)
+  toggleAlt (layer-toggle alternate)
   default (layer-switch default)
   kil  C-A-del                ;; Bind kil to a button that Ctrl-Alt-deletes
 
@@ -31,7 +32,7 @@
   home_n (tap-hold-next-release 200 j rsft)
   home_e (tap-hold-next-release 200 k rctl)
   home_o (tap-hold-next-release 200 l lalt)
-  home_i (tap-hold-next-release 200 ; rmet)
+  home_i (tap-hold-next-release 200 ; @toggleAlt)
 )
 
 (defsrc
@@ -44,7 +45,7 @@
 
 (deflayer default 
   grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
-  tab  q    @home_h    r    w   b   @home_n    @home_t    u    p    ;    bspc    ]    \
+  tab  q    @home_h    r    w   b   @home_n    @home_t    u    p    @home_i    bspc    ]    \
   esc  @home_a   @home_s    h    t    g    y    n    e    o    i    '    ret
   lsft z    x    m    c    v   @home_e   @home_o    ,    .    /    rsft
   lctl @alter lalt           spc            ralt @row
