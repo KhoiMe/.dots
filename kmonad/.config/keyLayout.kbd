@@ -18,21 +18,22 @@
 (defalias
   alter (layer-switch alternate)
   row (layer-switch rows)
+  symbol (layer-switch symbols)
   toggleRows (layer-toggle rows)
   toggleAlt (layer-toggle alternate)
   default (layer-switch default)
   kil  C-A-del                ;; Bind kil to a button that Ctrl-Alt-deletes
 
   ;; home row mods
-  home_a (tap-hold-next-release 200 a @toggleRows)
-  home_s (tap-hold-next-release 200 s lctl)
-  home_h (tap-hold-next-release 200 d lsft)
-  home_t (tap-hold-next-release 200 f lalt)
+  home_a (tap-hold-next-release 220 a @toggleRows)
+  home_s (tap-hold-next-release 220 s lctl)
+  home_h (tap-hold-next-release 220 d lsft)
+  home_t (tap-hold-next-release 220 f lalt)
 
-  home_n (tap-hold-next-release 200 j rsft)
-  home_e (tap-hold-next-release 200 k rctl)
-  home_o (tap-hold-next-release 200 l lalt)
-  home_i (tap-hold-next-release 200 ; @toggleAlt)
+  home_n (tap-hold-next-release 220 j lalt)
+  home_e (tap-hold-next-release 220 k lsft)
+  home_o (tap-hold-next-release 220 l lctl)
+  home_i (tap-hold-next-release 220 ; @toggleAlt)
 )
 
 (defsrc
@@ -47,8 +48,8 @@
   grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
   tab  q    @home_h    r    w   b   @home_n    @home_t    u    p    @home_i    bspc    ]    \
   esc  @home_a   @home_s    h    t    g    y    n    e    o    i    '    ret
-  lsft z    x    m    c    v   @home_e   @home_o    ,    .    /    rsft
-  lctl @alter lalt           spc            ralt @row
+  _ z    x    m    c    v   @home_e   @home_o    ,    .    /    rsft
+  lctl @alter @symbol           spc            ralt @row
 )
 
 (deflayer rows 
@@ -56,15 +57,23 @@
   tab  q    d    pp   volu    next    left    f    u    p    ;    [    ]    \
   esc  a    vold    h    t    g    prev    n    e    o    up    '    ret
   lsft z    x    m    c    v    down    right    ,    .    /    rsft
-  lctl @default lalt           spc            ralt  @alter 
+  lctl @default @symbol           spc            ralt  @alter 
 )
 
 (deflayer alternate 
   grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
-  tab  $   \)    }    {    8    4    8  1    bspc    ;   [    ]    \
-  esc  =    \(    0    t    9    \)    7    }    3    2    '    ret
+  tab  $   @home_h    }    {    `    4    @home_t  1    ]    \   [    ]    \
+  esc  @home_a    @home_s    0    t    9    [    7    }    3    2    '    ret
   lsft &    x    8    %    v    5    6    9    .    /    rsft
-  lctl @default lalt           spc            ralt @row
+  lctl @default @row           spc            ralt @symbol
+)
+
+(deflayer symbols 
+  grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
+  tab  $   @home_h    }    {    ~    $    @home_t  !    }    |   [    ]    \
+  esc  @home_a    @home_s    \)    t    9    {    &    }    #    @    '    ret
+  lsft &    x    *    %    v    %    ^    \(    .    /    rsft
+  lctl @default @row           spc            ralt @alter
 )
 
 
