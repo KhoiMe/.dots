@@ -18,8 +18,8 @@
 (defalias
   alter (layer-switch alternate)
   row (layer-switch rows)
-  symbol (layer-switch symbols)
-  toggleRows (layer-toggle rows)
+  symbol (layer-toggle rows)
+  toggleRows (layer-toggle symbols)
   toggleAlt (layer-toggle alternate)
   default (layer-switch default)
   kil  C-A-del                ;; Bind kil to a button that Ctrl-Alt-deletes
@@ -70,9 +70,9 @@
 
 (deflayer symbols 
   grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
-  tab  $   @home_h    }    {    ~    $    @home_t  !    }    |   [    ]    \
-  esc  @home_a    @home_s    \)    t    9    {    &    }    #    @    '    ret
-  lsft &    x    *    %    v    %    ^    \(    .    /    rsft
+  tab  $   @home_h    }    {    ~    $    @home_t  !    }   \)   [    ]    \
+  esc  @home_a    @home_s    \(    t    9    {    &    }    #    @    '    ret
+  lsft &    x    *    %    v    %    ^    |    .    /    rsft
   lctl @default @row           spc            ralt @alter
 )
 
