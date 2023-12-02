@@ -48,7 +48,7 @@ font:
 
     style: Bold Italic
 
-  size: 8.0
+  size: 9.0
 
   offset:
    x: 0
@@ -79,6 +79,11 @@ colors:
     magenta: '#aa52d5'
     cyan:    '#5fbfad'
     white:   '#c0c2c2'
+
+  cursor:
+    custom_colors: true
+    cursor: '#949494'
+    
 
 
 key_bindings:
