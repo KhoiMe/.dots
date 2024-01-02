@@ -1,0 +1,61 @@
+[colors.bright]
+black = "#444747"
+blue = "#6599d5"
+cyan = "#5fbfad"
+green = "#aabb39"
+magenta = "#aa52d5"
+red = "#d3222e"
+white = "#c0c2c2"
+yellow = "#e4bd39"
+
+[colors.cursor]
+cursor = "#949494"
+
+[colors.normal]
+black = "#2b2b2b"
+blue = "#a0b9d5"
+cyan = "#91beb6"
+green = "#afba66"
+magenta = "#bf92d5"
+red = "#d35a5f"
+white = "#3b3c3c"
+yellow = "#e5d289"
+
+[colors.primary]
+background = "#080808"
+foreground = "#949494"
+
+[font]
+size = 9.0
+
+[font.bold]
+family = "Cascursive"
+style = "Bold"
+
+[font.bold_italic]
+family = "Cascursive"
+style = "Bold Italic"
+
+[font.italic]
+family = "Cascursive"
+style = "Italic"
+
+[font.normal]
+family = "Cascursive"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 6
+
+[[keyboard.bindings]]
+action = "ToggleFullscreen"
+key = "F11"
+
+[scrolling]
+history = 50000
+
+[window]
+decorations_theme_variant = "Dark"
+dynamic_padding = true
+opacity = 0.9
