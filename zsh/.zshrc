@@ -53,6 +53,8 @@ bindkey -s ^f "~/scripts/tmux-sessions\n"
 #  aliases
 alias python=python3
 alias p=python3
+alias uni="cd ~/Documents/universidad/"
+alias note="~/./myScripts/note"
 alias v="nvim"
 alias r="ranger"
 alias books="ranger ~/Documents/books/"

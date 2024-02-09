@@ -1,13 +1,13 @@
-#!/bin/bash
+#/bin/bash
 
 # A bash script that helps me create notes for my blog
 # by running 'blog zet' or 'blog article' a markdown file is created in the proper directory, with my chosen filename.
 
-HOSTING_REPO="$REPOS/github.com/mischavandenburg/tech-blog-hosting/"
 
 # get_filename prompts the user for a filename
 get_filename() {
-	read -p "Enter a filename: " filename
+	read -p "Class:" filename
+    read -p "Topic_date:" topic 
 }
 
 # open_file creates and opens a file in the specified directory
@@ -18,59 +18,60 @@ open_file() {
 	# Cd into the directory
 	cd "$1" || exit
 	# Create the file in the specified directory
-	touch "$1/$filename.md"
+	touch "$1/$filename-$topic.md"
 
 	# cd into second brain
-	cd "$SECOND_BRAIN" || exit
+	cd ~/Documents/universidad/ || exit
 
 	# Format the title by removing dashes
 	title=$filename
 	title="${title//-/ }"
 
 	# set up the yaml frontmatter
-	echo "---" >>"$1/$filename.md"
-	echo "title: " >>"$1/$filename.md"
-	echo "date: $date" >>"$1/$filename.md"
+	echo "---" >>"$1/$filename-$topic.md"
+    if [[ $2 = "clases" ]]; then
+        echo "clase: $filename-$topic" >>"$1/$filename-$topic.md"
+            echo "tema: $topic" >>"$1/$filename-$topic.md"
+            echo "- " >>"$1/$filename-$topic.md"
+    fi
+    echo "date: $date" >>"$1/$filename-$topic.md"
 
 	if [[ $2 = "zet" ]]; then
-		echo "tags:" >>"$1/$filename.md"
-		echo "- " >>"$1/$filename.md"
+        echo "title: " >>"$1/$filename-$topic.md"
+		echo "tags:" >>"$1/$filename-$topic.md"
+		echo "- " >>"$1/$filename-$topic.md"
 	fi
 
-	if [[ $2 = "article" ]]; then
-		echo "tags:" >>"$1/$filename.md"
-		echo "- Article" >>"$1/$filename.md"
-	fi
 
-	echo "---" >>"$1/$filename.md"
-	echo -en "\n" >>"$1/$filename.md"
-	echo -en "\n" >>"$1/$filename.md"
-	echo -en "\n" >>"$1/$filename.md"
-	echo "## Links:" >>"$1/$filename.md"
-	echo -en "\n" >>"$1/$filename.md"
-	echo "$timestamp" >>"$1/$filename.md"
+	echo "---" >>"$1/$filename-$topic.md"
+	echo -en "\n" >>"$1/$filename-$topic.md"
+	echo -en "\n" >>"$1/$filename-$topic.md"
+	echo -en "\n" >>"$1/$filename-$topic.md"
+	echo "## Links:" >>"$1/$filename-$topic.md"
+	echo -en "\n" >>"$1/$filename-$topic.md"
+	echo "$timestamp" >>"$1/$filename-$topic.md"
 
 	# Open the file in Neovim
-	nvim '+ normal 2GzzA' "$1/$filename.md" -c :NoNeckPain
+	nvim '+ normal 2GzzA' "$1/$filename-$topic.md"
 
 }
 
 # Check the value of the first parameter
 case "$1" in
 zet)
-	# Call the function to get the filename
+	# Call the function to get the filename_$topic
 	get_filename
 
 	# Call the function to create and open the file in the specified directory
-	open_file "$HOME/websites/blog/content/zet" "zet"
+	open_file "$HOME/Documents/universidad/zets/" "zet"
 
 	;;
-article)
-	# Call the function to get the filename
+clases)
+	# Call the function to get the filename_$topic
 	get_filename
 
 	# Call the function to create and open the file in the specified directory
-	open_file "$HOME/websites/blog/content/zet/articles" "article"
+	open_file "$HOME/Documents/universidad/clases/" "clases"
 	;;
 
 reset)
@@ -120,7 +121,7 @@ pub)
 
 "")
 	# Change to the websites/blog directory if no argument was given
-	cd "$HOME/websites/blog" || exit
+	cd ~/Documents/universidad/ || exit
 	;;
 
 *)
