@@ -6,8 +6,8 @@
 
 # get_filename prompts the user for a filename
 get_filename() {
-	read -p "Class:" filename
-    read -p "Topic_date:" topic 
+	read -p "Class: " filename
+    read -p "Topic_date: " topic 
 }
 
 # open_file creates and opens a file in the specified directory
@@ -18,7 +18,7 @@ open_file() {
 	# Cd into the directory
 	cd "$1" || exit
 	# Create the file in the specified directory
-	touch "$1/$filename-$topic.md"
+	touch "$1/$filename-$topic-$date.md"
 
 	# cd into second brain
 	cd ~/Documents/universidad/ || exit
@@ -28,31 +28,32 @@ open_file() {
 	title="${title//-/ }"
 
 	# set up the yaml frontmatter
-	echo "---" >>"$1/$filename-$topic.md"
+	echo "---" >>"$1/$filename-$topic-$date.md"
     if [[ $2 = "clases" ]]; then
-        echo "clase: $filename-$topic" >>"$1/$filename-$topic.md"
-            echo "tema: $topic" >>"$1/$filename-$topic.md"
-            echo "- " >>"$1/$filename-$topic.md"
+        echo "clase: $filename-$topic-$date" >>"$1/$filename-$topic-$date.md"
+            echo "tema: $topic" >>"$1/$filename-$topic-$date.md"
+            echo "tags:" >>"$1/$filename-$topic-$date.md"
+            echo "- " >>"$1/$filename-$topic-$date.md"
     fi
-    echo "date: $date" >>"$1/$filename-$topic.md"
+    echo "date: $date" >>"$1/$filename-$topic-$date.md"
 
 	if [[ $2 = "zet" ]]; then
-        echo "title: " >>"$1/$filename-$topic.md"
-		echo "tags:" >>"$1/$filename-$topic.md"
-		echo "- " >>"$1/$filename-$topic.md"
+        echo "title: " >>"$1/$filename-$topic-$date.md"
+		echo "tags:" >>"$1/$filename-$topic-$date.md"
+		echo "- " >>"$1/$filename-$topic-$date.md"
 	fi
 
 
-	echo "---" >>"$1/$filename-$topic.md"
-	echo -en "\n" >>"$1/$filename-$topic.md"
-	echo -en "\n" >>"$1/$filename-$topic.md"
-	echo -en "\n" >>"$1/$filename-$topic.md"
-	echo "## Links:" >>"$1/$filename-$topic.md"
-	echo -en "\n" >>"$1/$filename-$topic.md"
-	echo "$timestamp" >>"$1/$filename-$topic.md"
+	echo "---" >>"$1/$filename-$topic-$date.md"
+	echo -en "\n" >>"$1/$filename-$topic-$date.md"
+	echo -en "\n" >>"$1/$filename-$topic-$date.md"
+	echo -en "\n" >>"$1/$filename-$topic-$date.md"
+	echo "## Links:" >>"$1/$filename-$topic-$date.md"
+	echo -en "\n" >>"$1/$filename-$topic-$date.md"
+	echo "$date" >>"$1/$filename-$topic-$date.md"
 
 	# Open the file in Neovim
-	nvim '+ normal 2GzzA' "$1/$filename-$topic.md"
+	nvim '+ normal 2GzzA' "$1/$filename-$topic-$date.md"
 
 }
 
