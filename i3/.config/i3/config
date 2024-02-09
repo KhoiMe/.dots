@@ -112,6 +112,14 @@ bindsym $mod+n workspace 4
 bindsym $mod+e workspace 5
 
 # move focused container to workspace
+bindsym $mod+Shift+f move container to workspace 1; workspace 1
+bindsym $mod+Shift+u move container to workspace 2; workspace 2
+bindsym $mod+Shift+p move container to workspace 3; workspace 3
+bindsym $mod+Shift+n move container to workspace 4; workspace 4
+bindsym $mod+Shift+e move container to workspace 5; workspace 5
+
+# now normally
+
 bindsym $mod+Shift+1 move container to workspace 1; workspace 1
 bindsym $mod+Shift+2 move container to workspace 2; workspace 2
 bindsym $mod+Shift+3 move container to workspace 3; workspace 3
@@ -168,7 +176,7 @@ mode "$mode_system" {
 }
 
 # ArcoLinux Logout
-bindsym $mod+Shift+e exec --no-startup-id archlinux-logout
+bindsym $mod+Shift+x exec --no-startup-id archlinux-logout
 bindsym $mod+X exec --no-startup-id archlinux-logout
 
 ################# reload changed configuration
@@ -376,7 +384,7 @@ bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
 # xkill
 bindsym --release $mod+Escape exec xkill
 
-bindsym $mod+Shift+u  exec --no-startup-id "amixer -D pulse sset Master '5%+'"
+# bindsym $mod+Shift+u  exec --no-startup-id "amixer -D pulse sset Master '5%+'"
 bindsym $mod+Shift+d exec --no-startup-id "amixer -D pulse sset Master '5%-'"
 bindsym $mod+Shift+m exec --no-startup-id "amixer -D pulse set Master toggle"
 # https://github.com/acrisci/playerctl/
@@ -481,7 +489,7 @@ mode "$mode_gaps_outer" {
 ################# picom of i3wm
 
 # if you want transparency on non-focused windows, ...
-exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
+# exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 exec_always --no-startup-id kmonad ~/.config/keyLayout.kbd
 
 bindsym control+mod1+o exec --no-startup-id ~/.config/i3/scripts/picom-toggle.sh
