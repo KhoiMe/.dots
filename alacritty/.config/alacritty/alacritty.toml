@@ -56,6 +56,11 @@ key = "F11"
 history = 50000
 
 [window]
-decorations_theme_variant = "Dark"
-dynamic_padding = true
-opacity = 0.9
+decorations = "none"
+# decorations_theme_variant = "Dark"
+# dynamic_padding = true
+# opacity = 0.9
+
+[window.padding]
+x = 7
+y = 0
