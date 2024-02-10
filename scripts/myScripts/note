@@ -53,7 +53,7 @@ open_file() {
 	echo "$date" >>"$1/$filename-$topic-$date.md"
 
 	# Open the file in Neovim
-	nvim '+ normal 2GzzA' "$1/$filename-$topic-$date.md"
+	nvim '+ normal 2GzzA' "$1/$filename-$topic-$date.md" -c :NoNeckPain
 
 }
 
