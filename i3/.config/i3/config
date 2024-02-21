@@ -30,7 +30,9 @@ set $right semicolon
 ################# Single and Dual screen
 
 # current displays
-exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
+# exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
+exec --no-startup-id xrandr --output HDMI-A-0 --same-as eDP --auto
+
 
 # mouse focus
 focus_follows_mouse no
