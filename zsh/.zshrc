@@ -57,6 +57,7 @@ alias md_pdf="pandoc --pdf-engine=pdfroff --output"
 alias uni="cd ~/Documents/universidad/"
 alias note="~/./myScripts/note"
 alias v="nvim"
+alias lvim="/home/tejada/.local/bin/lvim"
 alias r="ranger"
 alias books="ranger ~/Documents/books/"
 alias mysql=mariadb
