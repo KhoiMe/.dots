@@ -20,7 +20,7 @@ fg_error = "#e06c75"            # red
 bg_hint = "#FCE38A"             # yellow
 fg_matched_text = "#EC625F"     # green
 bg_passthrough_mode = "#56b6c2" # teal
-bg_insert_mode = "#50577A"      # blue
+bg_insert_mode = "#a7a7a7"      # blue
 bg_warning = "#c678dd"          # purple
 # "#be5046"                     # dark red
 
