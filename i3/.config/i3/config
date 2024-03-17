@@ -345,7 +345,8 @@ exec --no-startup-id volumeicon
 # feh sets wallpaper
 # exec --no-startup-id feh --bg-fill ~/Downloads/pexels-marcantoine-2457183.jpg &
 # exec --no-startup-id feh --bg-fill ~/Downloads/big_sur.jpg &
-exec --no-startup-id feh --bg-fill ~/Downloads/pexels-steve-johnson-1292241.jpg &
+# exec --no-startup-id feh --bg-fill ~/Downloads/pexels-steve-johnson-1292241.jpg &
+exec --no-startup-id feh --bg-fill ~/Downloads/mountain.jpg &
 # exec --no-startup-id feh --bg-fill ~/Downloads/macosNigth.png &
 # exec --no-startup-id feh --bg-fill ~/Downloads/think.png &
 # exec --no-startup-id feh --bg-fill ~/Downloads/vinyl.jpeg &
