@@ -30,8 +30,8 @@ set $right semicolon
 ################# Single and Dual screen
 
 # current displays
-# exec --no-startup-id xrandr --output DP0 --right-of HDMI-0 --auto
-exec --no-startup-id xrandr --output HDMI-A-0 --same-as eDP --auto
+# exec --no-startup-id xrandr --output DP0 --left-of HDMI-0 --auto
+exec --no-startup-id xrandr --output HDMI-A-0 --left-of eDP --auto
 
 
 # mouse focus
@@ -248,7 +248,7 @@ bindsym $mod+z split h
 
 # enter fullscreen mode for the focused container
 # Super + F in arcolinux is execute thunar
-bindsym $mod+m fullscreen toggle
+bindsym $mod+i fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 # qwerty/azerty issue for letter z
