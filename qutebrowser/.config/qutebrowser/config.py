@@ -215,11 +215,12 @@ c.fonts.tabs.selected = 'default_size default_family'
 
 # Font family for standard fonts.
 # Type: FontFamily
-c.fonts.web.family.standard = 'SF Pro Display'
+# c.fonts.web.family.standard = 'SF Pro Display'
+c.fonts.web.family.standard = 'Helvetica'
 
 # Font family for serif fonts.
 # Type: FontFamily
-c.fonts.web.family.serif = 'Times New Roman'
+c.fonts.web.family.serif = 'Cascursive'
 
 # Font family for cursive fonts.
 # Type: FontFamily

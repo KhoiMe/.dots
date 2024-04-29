@@ -41,7 +41,7 @@ family = "Source Code Pro "
 style = "Bold Italic"
 
 [font.normal]
-family = "CodeNewRoman Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [font.offset]
