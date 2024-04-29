@@ -46,7 +46,7 @@ style = "Regular"
 
 [font.offset]
 x = 0
-y = 6
+y = 7
 
 [[keyboard.bindings]]
 action = "ToggleFullscreen"
@@ -63,7 +63,7 @@ decorations = "none"
 
 [window.padding]
 x = 7
-y = 0
+y = 5
 
 [mouse]
 hide_when_typing = true
