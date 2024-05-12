@@ -22,16 +22,15 @@ set $mod Mod1
 
 # This is setup for qwerty
 # set $right to m if using azerty keyboard
-set $up l
-set $down k
-set $left j
-set $right semicolon
-
-################# Single and Dual screen
+set $up k
+set $down j
+set $left h
+set $right ################# Single and Dual screen
 
 # current displays
 # exec --no-startup-id xrandr --output DP0 --left-of HDMI-0 --auto
-exec --no-startup-id xrandr --output HDMI-A-0 --left-of eDP --auto
+# exec --no-startup-id xrandr --output HDMI-A-0 --left-of eDP --auto
+exec --no-startup-id xrandr --output HDMI-A-0 --left-of eDP --auto --rotate left
 
 
 # mouse focus
@@ -281,7 +280,7 @@ mode "resize" {
       bindsym $left       resize shrink width 5 px or 5 ppt
       bindsym $down       resize grow height 5 px or 5 ppt
       bindsym $up         resize shrink height 5 px or 5 ppt
-      bindskm $right      resize grow width 5 px or 5 ppt
+      bindsym $right      resize grow width 5 px or 5 ppt
 
       bindsym Left        resize shrink width 5 px or 5 ppt
       bindsym Down        resize grow height 5 px or 5 ppt
@@ -292,6 +291,11 @@ mode "resize" {
       bindsym Shift+Down move down
       bindsym Shift+Up move up
       bindsym Shift+Right move right
+
+      bindsym Shift+$left move left
+      bindsym Shift+$down move down
+      bindsym Shift+$up move up
+      bindsym Shift+$right move right
 
       bindsym Return mode "default"
       bindsym Escape mode "default"
@@ -346,7 +350,8 @@ exec --no-startup-id volumeicon
 # exec --no-startup-id feh --bg-fill ~/Downloads/pexels-marcantoine-2457183.jpg &
 # exec --no-startup-id feh --bg-fill ~/Downloads/big_sur.jpg &
 # exec --no-startup-id feh --bg-fill ~/Downloads/pexels-steve-johnson-1292241.jpg &
-exec --no-startup-id feh --bg-fill ~/Downloads/mountain.jpg &
+# exec --no-startup-id feh --bg-fill ~/Downloads/pexels-adriano-marquez-763912820-20985362.jpg &
+exec --no-startup-id feh --bg-fill ~/Downloads/0101_dusk-night-mountain-dark.jpg &
 # exec --no-startup-id feh --bg-fill ~/Downloads/macosNigth.png &
 # exec --no-startup-id feh --bg-fill ~/Downloads/think.png &
 # exec --no-startup-id feh --bg-fill ~/Downloads/vinyl.jpeg &
@@ -414,7 +419,7 @@ bindsym $mod+shift+b exec --no-startup-id i3-msg border toggle
 # changing border style
 # super+t in arcolinux is starting terminal
 # bindsym $mod+t border normal
-bindsym $mod+y border pixel 1
+# bindsym $mod+y border pixel 1
 # bindsym $mod+u border none
 
 # new_window pixel 1
@@ -438,8 +443,8 @@ popup_during_fullscreen smart
 # want it
 
 for_window [class="^.*"] border pixel 0
-gaps inner 2
-gaps outer 2
+gaps inner 4
+gaps outer 4
 smart_gaps on 
 # smart_borders on
 
