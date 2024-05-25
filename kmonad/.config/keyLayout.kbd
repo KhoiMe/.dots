@@ -30,7 +30,7 @@
   home_s (tap-hold-next-release 220 s lctl)
   home_h (tap-hold-next-release 220 d lsft)
   home_t (tap-hold-next-release 220 f lalt)
-
+  home_c (tap-hold-next-release 220 v @toggleAlt)
   home_n (tap-hold-next-release 220 j lalt)
   home_e (tap-hold-next-release 220 k lsft)
   home_o (tap-hold-next-release 220 l lctl)
@@ -49,7 +49,7 @@
   grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
   tab  q    @home_h    r    w   b   @home_n    @home_t    u    p    @home_i    -    =    \
   esc  @home_a   @home_s    h    t    g    y    n    e    o    i    '    ret
-  _ z    x    m    c    v   @home_e   @home_o    ,    .    /    rsft
+  _ z    x    m    c    @home_c   @home_e   @home_o    ,    .    /    rsft
   lctl @alter @symbol           spc            ralt @row
 )
 
@@ -57,16 +57,16 @@
   grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
   tab  q    @home_h    pp   volu    next    left    f    u    p    ;    [    ]    \
   esc  a    vold    h    t    g    prev    n    e    o    up    '    ret
-  lsft z    x    m    c    v    down    right    ,    .    /    rsft
+  lsft z    x    m    c   v    down    right    ,    .    /    rsft
   lctl @default @symbol           spc            ralt  @alter 
 )
 
 
 (deflayer alternate 
   grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
-  tab  1   7    4    2    `    @home_n    8  1    ]    \   -    =    \
-  esc  5    6    0    t    9    [    7    3    3    2    '    ret
-  lsft &    7    8    9    0    @home_e    @home_o    9    .    /    rsft
+  tab  -   @home_h    }    {    `    4    @home_t  1    ]    \   -    =    \
+  esc  @home_a    @home_s    0    t    9    [    7    }    3    2    '    ret
+  lsft &    x    8    %    v    5    6    9    .    /    rsft
   lctl @default @row           spc            ralt @symbol
 )
 
