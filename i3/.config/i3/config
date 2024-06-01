@@ -351,8 +351,9 @@ exec --no-startup-id volumeicon
 # exec --no-startup-id feh --bg-fill ~/Downloads/big_sur.jpg &
 # exec --no-startup-id feh --bg-fill ~/Downloads/pexels-steve-johnson-1292241.jpg &
 # exec --no-startup-id feh --bg-fill ~/Downloads/pexels-adriano-marquez-763912820-20985362.jpg &
-exec --no-startup-id feh --bg-fill ~/Downloads/0101_dusk-night-mountain-dark.jpg &
-# exec --no-startup-id feh --bg-fill ~/Downloads/macosNigth.png &
+# exec --no-startup-id feh --bg-fill ~/Downloads/0101_dusk-night-mountain-dark.jpg &
+# exec --no-startup-id feh --bg-fill ~/Downloads/0001_city-grey-paint.jpg &
+exec --no-startup-id feh --bg-fill ~/Downloads/wallpaper.jpg &
 # exec --no-startup-id feh --bg-fill ~/Downloads/think.png &
 # exec --no-startup-id feh --bg-fill ~/Downloads/vinyl.jpeg &
 # exec --no-startup-id feh --bg-fill ~/Downloads/gargantua.jpg &
@@ -445,7 +446,7 @@ popup_during_fullscreen smart
 for_window [class="^.*"] border pixel 0
 gaps inner 4
 gaps outer 4
-smart_gaps on 
+# smart_gaps on 
 # smart_borders on
 
 ################# i3 gaps change
