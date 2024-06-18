@@ -369,6 +369,7 @@ exec --no-startup-id xfce4-power-manager &
 # IF xfsettingsd is activated you can not change themes
 # exec --no-startup-id xfsettingsd &
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
+exec --no-startup-id rnote /home/tejada/myLife.rnote &
 
 ################# applications keyboard shortcuts
 
@@ -446,7 +447,7 @@ popup_during_fullscreen smart
 for_window [class="^.*"] border pixel 0
 gaps inner 4
 gaps outer 4
-# smart_gaps on 
+smart_gaps on 
 # smart_borders on
 
 ################# i3 gaps change
