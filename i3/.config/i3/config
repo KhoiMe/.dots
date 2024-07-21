@@ -290,7 +290,7 @@ exec_always --no-startup-id numlockx on
 exec --no-startup-id volumeicon
 
 # feh sets wallpaper
-exec --no-startup-id feh --bg-fill ~/Downloads/pexels-steve-1292241.jpg &
+exec --no-startup-id feh --bg-fill ~/Downloads/pexels-og-mpango-1582361-10147934.jpg &
 exec --no-startup-id setxkbmap -option caps:escape &
 
 # Polybar
