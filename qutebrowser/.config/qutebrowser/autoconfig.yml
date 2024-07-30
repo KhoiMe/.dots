@@ -6,7 +6,5 @@
 
 config_version: 2
 settings:
-  fonts.default_family:
-    global: JetBrainsMono Nerd Font
-  fonts.web.family.standard:
-    global: Helvetica
+  zoom.default:
+    global: 120%

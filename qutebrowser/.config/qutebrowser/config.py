@@ -207,7 +207,10 @@ c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?hl=en&q={}'}
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = 'google.com'
+c.url.start_pages = 'api.quotable.io/quotes/fC5Jr2NsYm'
+# fC5Jr2NsYm
+# 3uAvqPj3dZ
+# fhyB06UQ9hjL
 
 # Font used for selected tabs.
 # Type: Font
