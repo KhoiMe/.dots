@@ -290,7 +290,8 @@ exec_always --no-startup-id numlockx on
 exec --no-startup-id volumeicon
 
 # feh sets wallpaper
-exec --no-startup-id feh --bg-fill ~/Downloads/pexels-og-mpango-1582361-10147934.jpg &
+exec --no-startup-id feh --bg-fill ~/Downloads/dark.png &
+# set esc: on caps
 exec --no-startup-id setxkbmap -option caps:escape &
 
 # Polybar
@@ -302,7 +303,9 @@ exec --no-startup-id xfce4-power-manager &
 # IF xfsettingsd is activated you can not change themes
 # exec --no-startup-id xfsettingsd &
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
-exec --no-startup-id rnote /home/tejada/notebook/myLife.rnote &
+exec --no-startup-id dunst &
+# exec --no-startup-id rnote /home/tejada/notebook/myLife.rnote &
+exec --no-startup-id mailspring --password-store="gnome-libsecret" &
 
 ################# applications keyboard shortcuts
 
@@ -326,8 +329,13 @@ bindsym $mod+Shift+m exec --no-startup-id "amixer -D pulse set Master toggle"
 # https://github.com/acrisci/playerctl/
 bindsym $mod+a exec --no-startup-id playerctl play-pause
 bindsym $mod+t exec --no-startup-id playerctl next
-bindsym $mod+v exec --no-startup-id playerctl previous
+# bindsym $mod+v exec --no-startup-id playerctl previous
 bindsym XF86AudioStop exec --no-startup-id playerctl stop
+
+################# xbacklight
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
+
 # bar toggle, hide or show
 bindsym $mod+b bar mode toggle
 
@@ -358,11 +366,11 @@ popup_during_fullscreen smart
 # delete or uncomment the following lines if you do not have it or do not
 # want it
 
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 gaps inner 4
 gaps outer 4
-smart_gaps on 
-# smart_borders on
+# smart_gaps on 
+smart_borders on
 
 ################# i3 gaps change
 
@@ -437,7 +445,7 @@ bar {
     }
     # Window color settings
     # class                 border  backgr. text    indicator
-    client.focused          #ABD5C5 #ABD5C5 #e5e5e5 #ABD5C5
+    client.focused          #aaaaaa #aaaaaa #e5e5e5 #aaaaaa
     client.unfocused        #222222 #222222 #aaaaaa #222222
     client.focused_inactive #222222 #222222 #a9a9a9 #222222
     client.placeholder      #222222 #222222 #aaaaaa #222222
