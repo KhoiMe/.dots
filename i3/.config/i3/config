@@ -333,9 +333,11 @@ bindsym $mod+t exec --no-startup-id playerctl next
 bindsym XF86AudioStop exec --no-startup-id playerctl stop
 
 ################# xbacklight
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
+# bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
+# bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
 
+bindsym XF86MonBrightnessUp exec --no-startup-id blight set +70 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id blight set -70 # decrease screen brightness
 # bar toggle, hide or show
 bindsym $mod+b bar mode toggle
 
