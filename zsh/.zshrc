@@ -36,7 +36,6 @@ plugins=(
   yarn
   history
   ubuntu
-	zsh-interactive-cd
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -61,18 +60,8 @@ alias v="nvim"
 alias lvim="/home/tejada/.local/bin/lvim"
 alias r="ranger"
 alias books="ranger ~/Documents/books/"
-alias mysql=mariadb
-alias sdcu="sudo docker-compose up -d"
-alias sdcd="sudo docker-compose down"
 
 alias di='lsd --group-dirs=first'
-
-alias gaa="git add ."
-alias gcm=git commit
-alias gps="git push"
-alias gpl="git pull"
-alias gcb= git checkout -b
-
 
 function openNvim {
   if [ $# -eq 0 ]; then
@@ -114,6 +103,7 @@ eval "$(starship init zsh)"
 export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
 # ~/.config/tmux/plugins
 export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH
+export PATH="$PATH:$HOME/flutter/bin/"
 #screenfetch
 
 export PATH=$PATH:/home/tejada/.spicetify
