@@ -29,7 +29,7 @@ set $right ################# Single and Dual screen
 
 # current displays
 # exec --no-startup-id xrandr --output DP0 --left-of HDMI-0 --auto
-exec --no-startup-id xrandr --output HDMI-A-0 --left-of eDP --auto
+exec --no-startup-id xrandr --output HDMI-A-0 --same-as eDP --auto
 # exec --no-startup-id xrandr --output HDMI-A-0 --left-of eDP --auto --rotate left
 
 
@@ -290,9 +290,10 @@ exec_always --no-startup-id numlockx on
 exec --no-startup-id volumeicon
 
 # feh sets wallpaper
-exec --no-startup-id feh --bg-fill ~/Downloads/dark.png &
+exec --no-startup-id feh --bg-fill ~/Downloads/wallpaper.jpg &
 # set esc: on caps
 exec --no-startup-id setxkbmap -option caps:escape &
+# exec --no-startup-id conky -d
 
 # Polybar
 # exec_always --no-startup-id ~/.config/polybar/launch.sh &
@@ -306,6 +307,7 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 exec --no-startup-id dunst &
 # exec --no-startup-id rnote /home/tejada/notebook/myLife.rnote &
 exec --no-startup-id mailspring --password-store="gnome-libsecret" &
+exec --no-startup-id albert
 
 ################# applications keyboard shortcuts
 

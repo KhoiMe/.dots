@@ -33,7 +33,7 @@
   home_c (tap-hold-next-release 220 v @toggleAlt)
   home_n (tap-hold-next-release 220 j lalt)
   home_e (tap-hold-next-release 220 k lsft)
-  home_o (tap-hold-next-release 220 l lctl)
+  home_o (tap-hold-next-release 220 l rctl)
   home_i (tap-hold-next-release 220 ; @symbol)
 )
 

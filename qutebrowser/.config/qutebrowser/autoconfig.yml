@@ -6,5 +6,10 @@
 
 config_version: 2
 settings:
-  zoom.default:
-    global: 120%
+  editor.command:
+    global:
+    - nvim
+    - -f
+    - '{file}'
+    - -c
+    - normal {line}G{column0}l
