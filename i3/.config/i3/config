@@ -236,7 +236,6 @@ bindsym $mod+space focus mode_toggle
 # bindsym $mod+a focus parent
 
 # focus the child container
-# bindsym $mod+d focus child
 
 ################# resize
 
@@ -288,6 +287,7 @@ exec_always --no-startup-id numlockx on
 # volume
 # exec --no-startup-id pasystray
 exec --no-startup-id volumeicon
+exec --no-startup-id flameshot
 
 # feh sets wallpaper
 exec --no-startup-id feh --bg-fill ~/Downloads/wallpaper.jpg &
@@ -317,6 +317,8 @@ exec --no-startup-id albert
 # terminal
 bindsym $mod+Return exec --no-startup-id alacritty;focus
 bindsym F12 exec --no-startup-id xfce4-terminal --drop-down; focus
+
+bindsym $mod+m exec --no-startup-id flameshot gui
 
 # System monitor
 bindsym control+Shift+Escape exec --no-startup-id xfce4-taskmanager;focus
