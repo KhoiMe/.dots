@@ -46,7 +46,7 @@ style = "Regular"
 
 [font.offset]
 x = 0
-y = 7
+y = 9
 
 [[keyboard.bindings]]
 action = "ToggleFullscreen"
@@ -59,7 +59,7 @@ history = 50000
 decorations = "none"
 # decorations_theme_variant = "Dark"
 # dynamic_padding = true
-# opacity = 0.9
+opacity = 0.9
 
 [window.padding]
 x = 7

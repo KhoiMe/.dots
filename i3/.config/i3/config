@@ -29,8 +29,8 @@ set $right ################# Single and Dual screen
 
 # current displays
 # exec --no-startup-id xrandr --output DP0 --left-of HDMI-0 --auto
-exec --no-startup-id xrandr --output HDMI-A-0 --same-as eDP --auto
-# exec --no-startup-id xrandr --output HDMI-A-0 --left-of eDP --auto --rotate left
+# exec --no-startup-id xrandr --output HDMI-A-0 --same-as eDP --auto
+exec --no-startup-id xrandr --output HDMI-A-0 --left-of eDP --auto --rotate left
 
 
 # mouse focus
@@ -290,7 +290,8 @@ exec --no-startup-id volumeicon
 exec --no-startup-id flameshot
 
 # feh sets wallpaper
-exec --no-startup-id feh --bg-fill ~/Downloads/wallpaper.jpg &
+# exec --no-startup-id feh --bg-fill ~/Downloads/wallpaper.jpg &
+exec --no-startup-id feh --bg-fill ~/Pictures/hillVillage.jpg &
 # set esc: on caps
 exec --no-startup-id setxkbmap -option caps:escape &
 # exec --no-startup-id conky -d
