@@ -70,12 +70,11 @@
   lctl @default @row           spc            ralt @symbol
 )
 
-
 (deflayer symbols 
   grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
   tab  ~   @home_h    ]    {    [    $    @home_t  !    }   \)   -    =    \
-  esc  @home_a    @home_s    \(    -    =    {    &    [    #    @    ]    ret
-  lsft &    x    *    %    v    %    ^    \    ]    /    rsft
+  esc  @home_a    @home_s    \(    t    =    {    &    [    #    @    ]    ret
+  lsft &    x    *    %    v    %    ^    |    ]    /    rsft
   lctl @default @row           spc            ralt @alter
 )
 
