@@ -6,10 +6,7 @@
 
 config_version: 2
 settings:
-  editor.command:
-    global:
-    - nvim
-    - -f
-    - '{file}'
-    - -c
-    - normal {line}G{column0}l
+  statusbar.show:
+    global: never
+  tabs.show:
+    global: multiple

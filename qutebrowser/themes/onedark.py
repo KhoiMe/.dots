@@ -7,8 +7,8 @@
 # base16 colors but with variable names that 
 # reflect what the color is mainly used for
 
-bg_default = "#101010"          # main shade darkest
-bg_lighter = "#101010"
+bg_default = "#000000"          # main shade darkest
+bg_lighter = "#000000"
 bg_selection = "#282828"
 # "#545862"
 fg_disabled = "#565c64"
@@ -16,17 +16,18 @@ fg_default = "#F9F7F7"
 # "#b6bdca"
 bg_lightest = "#c8ccd4"         # main shade lightest
 fg_error = "#e06c75"            # red
-# "#d19a66"                     # orange
-bg_hint = "#91beb6"             # yellow
-fg_matched_text = "#d35a5f"     # green
+bg_hint = "#c8ccd4"             # yellow
+fg_matched_text = "#e06c75"     # green
 bg_passthrough_mode = "#a0b9d5" # teal
-bg_insert_mode = "#a7a7a7"      # blue
+bg_insert_mode = "#282828"      # blue
 bg_warning = "#c678dd"          # purple
 # "#be5046"                     # dark red
 
 ############
 # SETTINGS #
 ############
+
+c.hints.border = bg_lighter
 
 # Text color of the completion widget. May be a single color to use for
 # all columns or a list of three colors, one for each column.
@@ -178,7 +179,7 @@ c.colors.statusbar.normal.fg = fg_matched_text
 c.colors.statusbar.normal.bg = bg_default
 
 # Foreground color of the statusbar in insert mode.
-c.colors.statusbar.insert.fg = bg_default
+c.colors.statusbar.insert.fg = fg_matched_text
 
 # Background color of the statusbar in insert mode.
 c.colors.statusbar.insert.bg = bg_insert_mode
