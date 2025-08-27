@@ -80,6 +80,7 @@ focus_follows_mouse no
 
 # move workspace monitor
 bindsym $mod+k move workspace to output right
+bindsym $mod+r focus output right
 
 # change focus
 bindsym $mod+h focus left
@@ -222,7 +223,7 @@ mode "$mode_system" {
 }
 
 # Resize window (you can also use the mouse for that)
-bindsym $mod+r mode "resize"
+bindsym $mod+s mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
         # Pressing left will shrink the window’s width.
