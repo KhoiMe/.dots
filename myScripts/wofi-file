@@ -1,0 +1,5 @@
+#!/bin/bash
+
+file=$(find ~/ -type f ! -path '*/.*' | wofi --dmenu --matching fuzzy --gtk-dark)
+
+[ -n "$file" ] && xdg-open "$file"
