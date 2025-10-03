@@ -1,2 +1,2 @@
 killall waybar
-waybar -c /home/tej/.dots/waybar/config.jsonc -s /home/tej/.dots/waybar/style.css
+waybar -c /home/jose/.dots/waybar/config.jsonc -s /home/jose/.dots/waybar/style.css
