@@ -1,0 +1,68 @@
+;; Kanata config translated from KMonad
+(defcfg 
+ linux-dev /dev/input/by-id/usb-SEMICO_Gaming_Keyboard-event-kbd:/dev/input/by-path/platform-i8042-serio-0-event-kbd 
+  process-unmapped-keys yes
+  concurrent-tap-hold yes
+) 
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    d    r    w    b    j    f    u    p    ;    [    ]    \
+  caps  a    s    h    t    g    y    n    e    o    i    '    ret
+  lsft z    x    m    c    v    k    l    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rctl
+)
+
+(defalias
+  ;; Layer switches
+  alter   (layer-switch alternate)
+  row     (layer-switch rows)
+  symbol  (layer-toggle rows)
+  toggleRows (layer-toggle symbols)
+  toggleAlt  (layer-toggle alternate)
+  default (layer-switch default)
+
+  ;; Home row mods
+  home_a (tap-hold-release 190 190 a (layer-toggle symbols))
+  home_s (tap-hold-release 190 190 s lctl)
+  home_h (tap-hold-release 190 190 d lsft)
+  home_t (tap-hold-release 190 190 f lalt)
+  home_c (tap-hold-release 190 190 v (layer-toggle alternate))
+  home_n (tap-hold-release 190 190 j lalt)
+  home_e (tap-hold-release 190 190 k lsft)
+  home_o (tap-hold-release 190 190 l rctl)
+  home_i (tap-hold-release 190 190 ; (layer-toggle rows))
+)
+
+(deflayer default
+  grv  _    _    _    _    _    _    _    _    _    _    _    _    bspc
+  tab  q    @home_h  r    w    b    @home_n  @home_t  u    p    @home_i  -    =    \
+  esc  @home_a  @home_s  h    t    g    y    n    e    o    i    '    ret
+  _    z    x    m    c    @home_c  @home_e  @home_o  ,    .    /    rsft
+  lctl @alter  @symbol       spc            ralt @row
+)
+
+(deflayer rows
+  grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
+  tab  q    @home_h  pp   volu next left f    u    p    ;    [    ]    \
+  esc  a    vold h    t    g    prev n    e    o    up   '    ret
+  lsft z    x    m    c    v    down right ,    .    /    rsft
+  lctl @default @symbol       spc            ralt @alter
+)
+
+(deflayer alternate
+  grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
+  tab  -    @home_h  }    {    grv  4    @home_t  1    ]    bspc -    =    \
+  esc  @home_a  @home_s  0    t    9    [    7    }    3    2    '    ret
+  lsft S-7  x    8    S-5  v    5    6    9    .    /    rsft
+  lctl @default @row         spc            ralt @symbol
+)
+
+(deflayer symbols
+  grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
+  tab  S-grv @home_h  ]    {    [    S-4  @home_t  S-1  }    S-0  -    =    \
+  esc  @home_a  @home_s  S-9  -    =    {    S-7  [    S-3  S-2  ]    ret
+  lsft S-7  x    S-8  S-5  v    S-5  S-6  \    ]    /    rsft
+  lctl @default @row         spc            ralt @alter
+)
+
