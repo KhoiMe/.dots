@@ -1,5 +1,7 @@
 #!/bin/bash
 
-file=$(find ~/uni/ -type f ! -path '*/.*' | wofi --dmenu --matching fuzzy --gtk-dark)
+# Find all files in ~/uni/ excluding hidden files
+file=$(find ~/uni/ -type f ! -path '*/.*' | rofi -dmenu -matching fuzzy -p "Select File")
 
+# Open the file if it was selected
 [ -n "$file" ] && xdg-open "$file"
