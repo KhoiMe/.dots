@@ -60,8 +60,8 @@
 
 (deflayer symbols
   grv  _    _    _    _    _    _    _    _    _    _    -    =    bspc
-  tab  S-grv @home_h  ]    {    [    S-4  @home_t  S-1  }    S-0  -    =    \
-  esc  @home_a  @home_s  S-9  -    =    {    S-7  [    S-3  S-2  ]    ret
+  tab  S-grv @home_h  ]    S-{    [    S-4  @home_t  S-1  S-}    S-0  -    =    \
+  esc  @home_a  @home_s  S-9  -    =    S-{    S-7  [    S-3  S-2  ]    ret
   lsft S-7  x    S-8  S-5  v    S-5  S-6  \    ]    /    rsft
   lctl @default @row         spc            ralt @alter
 )
