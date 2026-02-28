@@ -13,7 +13,7 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Montserrat, FontAwesome 10
+font pango:Inter, FontAwesome 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -73,7 +73,7 @@ bindsym $mod+k exec --no-startup-id ~/.dots/myScripts/wofi-file
 
 # for_window [class="^.*"] border none
 
-default_border pixel 1
+default_border pixel 2
 default_floating_border pixel 1
 
 hide_edge_borders none
@@ -204,13 +204,13 @@ mode "resize" {
 bindsym $mod+w mode "resize"
 
 # class                 border  bground text    indicator child_border
-client.focused          #83CAFA #51A2DA #FFFFFF #83CAFA   #51A2DA
-client.focused_inactive #8C8C8C #4C4C4C #FFFFFF #4C4C4C   #8C8C8C
+client.focused          #2979FF #3C6EB4 #E0E0E0 #3C6EB4   #3C6EB4
+client.focused_inactive #8C8C8C #4C4C4C #E0E0E0 #4C4C4C   #8C8C8C
 client.unfocused        #4C4C4C #222222 #888888 #292D2E   #222222
-client.urgent           #EC69A0 #DB3279 #FFFFFF #DB3279   #DB3279
-client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+client.urgent           #EC69A0 #DB3279 #E0E0E0 #DB3279   #DB3279
+client.placeholder      #000000 #0C0C0C #E0E0E0 #000000   #0C0C0C
 
-client.background       #FFFFFF
+client.background       #212121
 bindsym $mod+b bar mode toggle
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -220,15 +220,15 @@ bar {
   hidden_state hide
   position top
   colors {
-    background #000000
-    statusline #FFFFFF
+    background #212121
+    statusline #E0E0E0
     separator  #666666
 
-    focused_workspace  #3C6EB4 #212121 #FFFFFF
-    active_workspace   #4C4C4C #212121 #FFFFFF
+    focused_workspace  #3C6EB4 #212121 #E0E0E0
+    active_workspace   #4C4C4C #212121 #E0E0E0
     inactive_workspace #212121 #212121 #888888
-    urgent_workspace   #EC69A0 #DB3279 #FFFFFF
-    binding_mode       #b691d3 #A07CBC #FFFFFF
+    urgent_workspace   #EC69A0 #DB3279 #E0E0E0
+    binding_mode       #b691d3 #A07CBC #E0E0E0
   }
   status_command i3status
 }
