@@ -156,11 +156,11 @@ bindsym $mod+n workspace number $ws4
 bindsym $mod+e workspace number $ws5
 
 # move focused container to workspace
-bindsym $mod+Shift+f move container to workspace number $ws1
-bindsym $mod+Shift+u move container to workspace number $ws2
-bindsym $mod+Shift+p move container to workspace number $ws3
-bindsym $mod+Shift+n move container to workspace number $ws4
-bindsym $mod+Shift+e move container to workspace number $ws5
+bindsym $mod+Shift+f move container to workspace number $ws1; workspace 1
+bindsym $mod+Shift+u move container to workspace number $ws2; workspace 2
+bindsym $mod+Shift+p move container to workspace number $ws3; workspace 3
+bindsym $mod+Shift+n move container to workspace number $ws4; workspace 4
+bindsym $mod+Shift+e move container to workspace number $ws5; workspace 5
 
 smart_gaps on
 smart_borders on
@@ -174,7 +174,7 @@ bindsym $mod+Shift+M reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+W restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+x exec "i3-nagbar -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+x exec "rofi -dmenu -mesg 'Exit i3? (y/N)' | grep -iq '^y' && i3-msg exit"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -204,7 +204,7 @@ mode "resize" {
 bindsym $mod+w mode "resize"
 
 # class                 border  bground text    indicator child_border
-client.focused          #2979FF #3C6EB4 #E0E0E0 #3C6EB4   #3C6EB4
+client.focused          #3C6EB4 #3C6EB4 #E0E0E0 #3C6EB4   #3C6EB4
 client.focused_inactive #8C8C8C #4C4C4C #E0E0E0 #4C4C4C   #8C8C8C
 client.unfocused        #4C4C4C #222222 #888888 #292D2E   #222222
 client.urgent           #EC69A0 #DB3279 #E0E0E0 #DB3279   #DB3279
